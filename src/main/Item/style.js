@@ -9,11 +9,12 @@ border:2px solid #eeeeee;
 border-radius:10px;
 padding:20px;
 box-shadow:3px 2px 5px rgba(0,0,0,.15);
-
 `
+
 export const Image = styled.img`
 max-width:300px;
 `
+
 export const ItemName = styled.input`
 position:absolute;
 bottom:0;
@@ -35,6 +36,7 @@ text-align:center;
 border:none;
 border-bottom:2px solid rgba(0,0,0,.2);
 `
+
 export const Cost = styled.input`
 position:absolute;
 bottom:0;
@@ -50,8 +52,9 @@ color: black;
 -webkit-text-stroke-width: 1px;
 -webkit-text-stroke-color: black;
 text-align:center;
-text-decoration: line-through;
 text-decoration-color:darkslategrey;
+
+text-decoration: ${props => props.onSale ? "line-through" : "none"};
 border:none;
 `
 export const SaleCost = styled.input`
@@ -64,7 +67,7 @@ padding:10px;
 
 background:transparent;
 
-font-size:1.8rem;
+font-size:2rem;
 color: black;
 -webkit-text-fill-color: white; 
 -webkit-text-stroke-width: 1px;
