@@ -4,7 +4,7 @@ import { Container, GlobalReset } from "./main";
 import { data as Data } from './__mock/data'
 import { Carosel } from './main/carosel'
 import { Navigation } from './main/navigation'
-
+import { Image } from './main/image'
 // DEBUG----
 import Shoes from './_media_/carosel/shoes.png'
 import Pants from './_media_/carosel/pants.png'
@@ -43,10 +43,30 @@ function ExampleApp() {
     <Fragment>
       <GlobalReset />
       <Navigation buttons={buttons} />
-
+      <Image src='https://cdn.pixabay.com/photo/2019/02/12/10/12/lake-3991809_960_720.jpg' />
+      <Image size={'medium'} src='https://cdn.pixabay.com/photo/2019/02/12/10/12/lake-3991809_960_720.jpg' />
+      <Image size={'small'} src='https://cdn.pixabay.com/photo/2019/02/12/10/12/lake-3991809_960_720.jpg' />
       <Container>
-        {data.map(item => {
-          return <Item {...item}
+        {data.map((item, i) => {
+          return <Item {...item} count={1}
+            updateItem={updateItem}
+            toggleOnSale={toggleOnSale}
+            deleteItem={deleteItem}
+          />
+        })}
+      </Container>
+      <Container>
+        {data.map((item, i) => {
+          return <Item {...item} count={1}
+            updateItem={updateItem}
+            toggleOnSale={toggleOnSale}
+            deleteItem={deleteItem}
+          />
+        })}
+      </Container>
+      <Container>
+        {data.map((item, i) => {
+          return <Item {...item} count={1}
             updateItem={updateItem}
             toggleOnSale={toggleOnSale}
             deleteItem={deleteItem}
