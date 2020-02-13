@@ -1,0 +1,7 @@
+node_modules
+public
+
+src/__mock
+src/_media_
+src/App.js
+src/Index.js

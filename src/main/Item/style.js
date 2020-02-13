@@ -2,17 +2,25 @@ import styled from 'styled-components';
 
 
 export const Item_ = styled.div`
+flex-grow:1;
+display:flex;
 position:relative;
-margin:0 auto;
+margin:0 10px;
+max-width:50%;
+max-height:${props => props.scale ? `${225 * props.scale}px`:'225px'};
 flex-flow:row wrap;
-border:2px solid #eeeeee;
 border-radius:10px;
-padding:20px;
-box-shadow:3px 2px 5px rgba(0,0,0,.15);
+padding:4rem 0;
+box-shadow: 5px 5px 8px rgba(127,127,127,.3), 
+                -5px -5px 8px rgba(255,255,255,1);
+
 `
 
 export const Image = styled.img`
-max-width:300px;
+max-width:50%;
+max-height:${props => props.scale ? `${225 * props.scale}px`:'225px'};
+object-fit:contain;
+margin:0 auto;
 `
 
 export const ItemName = styled.input`
@@ -42,7 +50,7 @@ position:absolute;
 bottom:0;
 right:0px;
 padding:5px;
-width:100px;
+width:120px;
 
 background:transparent;
 
@@ -64,9 +72,10 @@ left:0px;
 padding:5px;
 width:100px;
 padding:10px;
-
+border-radius:10px;
+box-shadow:2px 4px 5px rgba(0,0,0,.1);
 background:transparent;
-
+background:yellow;
 font-size:2rem;
 color: black;
 -webkit-text-fill-color: white; 
@@ -78,22 +87,20 @@ border:none;
 `
 export const CloseButton = styled.i`
 position:absolute;
-top:-13px;
-right:-13px;
+top: 5px;
+right:5px;
 border-radius:50%;
 font-size:1.4rem;
 padding:5px;
-width:25px;
-height:25px;
+width:20px;
+height:20px;
 text-align:center;
 border:none;
-box-shadow:3px 4px 5px rgba(0,0,0,.2);
 
 
-background:#dd0000;
 color: black;
--webkit-text-fill-color: white; 
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: black;
+-webkit-text-fill-color: #595959; 
+-webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: white;
 text-align:center;
 `
